@@ -51,8 +51,9 @@ currentSeed = 0
 location = -1
 
 #20283861 too high
-#for i in range(13907258, 20283861):
-for i in range(0, 99):
+#20283860 food
+for i in range(0, 1000000000):
+#for i in range(0, 99):
     currentSeed = i
     if location > 0:
         break
@@ -61,9 +62,9 @@ for i in range(0, 99):
     for map in reversed(maps):
         #print('map')
         for myrange in map:
-            #print(currentLocation)
+            #print(currentSeed)
             #print(myrange)
-            if (currentSeed >= myrange[1]) and (currentSeed <= myrange[1] + myrange[2]):
+            if (currentSeed >= myrange[1]) and (currentSeed <= myrange[1] + myrange[2] - 1):
                 currentSeed = myrange[0] + currentSeed - myrange[1]
                 #print(currentSeed)
                 break
